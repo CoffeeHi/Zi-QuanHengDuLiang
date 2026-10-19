@@ -3,8 +3,8 @@
   "fonttools_version": "4.67.0",
   "independent_build_count": 2,
   "fixed_head_modified": 3875212800,
-  "derived_sha256": "e7525fb3da124283dd82b99b4662a619a71eff2933e931ee39439f447f3dd66e",
+  "derived_sha256": "e9dc46e578191ed856fcd3df9432359be89067cf02ee16952a2af57a0fdb52f7",
   "bytes_identical": true,
   "source_sha256": "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61",
-  "expected_modified_outline_count": 11
+  "expected_modified_outline_count": 12
 }

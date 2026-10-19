@@ -23,12 +23,12 @@ from fontTools.ttLib import TTFont
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE_SHA256 = "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61"
-TARGET_CHARACTERS = "入送书士个凉屏料罥浥疏"
+TARGET_CHARACTERS = "入送书士个凉屏料罥浥疏乌"
 FAMILY = "QHDL Poem Fix"
 POSTSCRIPT = "QHDLPoemFix-Regular"
 FULL_NAME = FAMILY + " Regular"
-VERSION = "0.203-poemfix"
-REVISION = 0.203
+VERSION = "0.204-poemfix"
+REVISION = 0.204
 MODIFIED_TIME = int(datetime(2026, 10, 19, tzinfo=timezone.utc).timestamp()) + 2082844800
 COPYRIGHT_ADDITION = "Selected glyph revisions copyright 2026 Poem Subtitle Font Revision contributors."
 MUTABLE_TABLES = {"CFF ", "hmtx", "vmtx", "name", "head", "DSIG"}
@@ -276,7 +276,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-v0.2.otf")
     parser.add_argument("--patch", type=Path, default=REPOSITORY / "patches/poem-glyphs.json")
-    parser.add_argument("--output", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-PoemFix-v0.2.3.otf")
+    parser.add_argument("--output", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-PoemFix-v0.2.4.otf")
     parser.add_argument("--verify-report", type=Path, default=REPOSITORY / "build/poemfix-validation.json")
     parser.add_argument("--verify-only", action="store_true", help="Verify an existing --output without rebuilding it")
     args = parser.parse_args()
