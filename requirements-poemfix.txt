@@ -1,0 +1,2 @@
+# Reproducible CFF build and full-font structural verification.
+fontTools==4.67.0

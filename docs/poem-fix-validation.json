@@ -1,0 +1,144 @@
+{
+  "ok": true,
+  "errors": [],
+  "checks": {
+    "glyph_count": {
+      "original": 65535,
+      "derived": 65535
+    },
+    "glyph_order_unchanged": true,
+    "best_cmap_unchanged": true,
+    "all_unicode_cmap_tables_unchanged": true,
+    "units_per_em_unchanged": true,
+    "actual_modified_outlines": [
+      "cid09570",
+      "cid09650",
+      "cid10899",
+      "cid11049",
+      "cid13958",
+      "cid15814",
+      "cid20051",
+      "cid23359",
+      "cid31801",
+      "cid40249"
+    ],
+    "actual_modified_outline_count": 10,
+    "exactly_expected_ten_glyphs_changed": true,
+    "unexpected_outline_changes": [],
+    "metric_changes": {
+      "hmtx": [
+        "cid09570",
+        "cid09650",
+        "cid10899",
+        "cid11049",
+        "cid13958",
+        "cid15814",
+        "cid20051",
+        "cid23359",
+        "cid31801",
+        "cid40249"
+      ],
+      "vmtx": [
+        "cid09570",
+        "cid09650",
+        "cid10899",
+        "cid11049",
+        "cid13958",
+        "cid15814",
+        "cid20051",
+        "cid23359",
+        "cid31801",
+        "cid40249"
+      ]
+    },
+    "exactly_expected_metric_changes": true,
+    "unexpected_metric_changes": [],
+    "final_patch_mismatches": [],
+    "affected_unicode_codepoints": [
+      "U+2F0A",
+      "U+2F20",
+      "U+4E2A",
+      "U+4E66",
+      "U+5165",
+      "U+51C9",
+      "U+58EB",
+      "U+5C4F",
+      "U+6599",
+      "U+6D65",
+      "U+7F65",
+      "U+9001",
+      "U+F979",
+      "U+F9BE"
+    ],
+    "cmap_alias_note": "Ten shared glyphs also cover U+2F0A, U+2F20, U+F979, U+F9BE; mappings are unchanged.",
+    "frozen_tables_byte_identical": {
+      "BASE": true,
+      "GDEF": true,
+      "GPOS": true,
+      "GSUB": true,
+      "OS/2": true,
+      "VORG": true,
+      "cmap": true,
+      "hhea": true,
+      "maxp": true,
+      "post": true,
+      "vhea": true
+    },
+    "table_set_expected": true,
+    "dsig_removed": true,
+    "metadata": {
+      "family": [
+        "QHDL Poem Fix"
+      ],
+      "full_name": [
+        "QHDL Poem Fix Regular"
+      ],
+      "postscript_name": [
+        "QHDLPoemFix-Regular"
+      ],
+      "version": [
+        "Version 0.201-poemfix"
+      ],
+      "cff_font_names": [
+        "QHDLPoemFix-Regular"
+      ],
+      "cff_family": "QHDL Poem Fix",
+      "cff_full_name": "QHDL Poem Fix Regular",
+      "cff_version": "0.201-poemfix",
+      "cff_fd_names": [
+        "QHDLPoemFix-FD0",
+        "QHDLPoemFix-FD1",
+        "QHDLPoemFix-FD2",
+        "QHDLPoemFix-FD3",
+        "QHDLPoemFix-FD4",
+        "QHDLPoemFix-FD5",
+        "QHDLPoemFix-FD6",
+        "QHDLPoemFix-FD7",
+        "QHDLPoemFix-FD8",
+        "QHDLPoemFix-FD9",
+        "QHDLPoemFix-FD10",
+        "QHDLPoemFix-FD11",
+        "QHDLPoemFix-FD12",
+        "QHDLPoemFix-FD13",
+        "QHDLPoemFix-FD14",
+        "QHDLPoemFix-FD15",
+        "QHDLPoemFix-FD16",
+        "QHDLPoemFix-FD17"
+      ],
+      "head_modified": 3875212800
+    },
+    "independent_names_expected": true,
+    "embedded_original_copyright_retained": true,
+    "fixed_head_modified": true,
+    "head_revision_expected": true,
+    "source_file_unchanged": true
+  },
+  "source": "data/QuanHengDuLiang-v0.2.otf",
+  "derived": "data/QuanHengDuLiang-PoemFix-v0.2.1.otf",
+  "patch": "patches/poem-glyphs.json",
+  "fonttools_version": "4.67.0",
+  "source_sha256": "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61",
+  "patch_sha256": "a84a97353a7adbb198bdd88a65debd7e96b1bcfac8635e643162b19a8182cf37",
+  "reference_review_sha256": "a46f8f55cf31b10d5c19277cfe52ba29bc96aea97e5ee3860d284e9598c6ed22",
+  "derived_sha256": "51ea28e5ac57c78066b232379032ec14367bfb23658485830f7eb8828f128172"
+}

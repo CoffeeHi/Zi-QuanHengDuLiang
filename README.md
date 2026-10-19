@@ -1,5 +1,17 @@
 # 权衡度量体 (QuanHengDuLiang-Jian)
 
+## Poem caption glyph fixes (this branch)
+
+This branch adds a separately named **QHDL Poem Fix** OTF and reproducible
+outline patches for ten glyphs. The upstream fonts remain unchanged.
+
+- [修订说明、构建与校验](docs/poem-fix.md)
+- [修订字体 OTF](data/QuanHengDuLiang-PoemFix-v0.2.1.otf)
+- [十字前后样张](docs/poem-glyph-comparison.png)
+
+The derivative font and glyph outlines retain the Source Han OFL notice in
+addition to the upstream MIT notice; see [FONT-NOTICES.txt](FONT-NOTICES.txt).
+
 A Chinese calligraphy font based on handwritten characters from the Qing Dynasty text 《权衡度量实验考》. The font was created by extracting 338 characters from the original book and using [zi2zi-JiT](https://github.com/kaonashi-tyc/zi2zi-JiT) to generate the full GB2312 character set (6763 characters).
 
 Below is a sample page from the original 《权衡度量实验考》:

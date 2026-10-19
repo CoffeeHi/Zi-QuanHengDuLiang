@@ -1,0 +1,22 @@
+QHDL Poem Fix 0.2.1
+
+Derived from QuanHengDuLiang v0.2 by Yuchen Tian:
+https://github.com/kaonashi-tyc/Zi-QuanHengDuLiang
+Upstream MIT notice is retained verbatim in LICENSE.
+
+The base OTF contains Source Han font data under the SIL Open Font License 1.1.
+The complete Adobe/OFL notice is retained in licenses/OFL-1.1-SourceHan.txt.
+The derivative OTF and patches/poem-glyphs.json retain these font notices and
+are distributed under OFL-1.1; they are not relicensed solely as MIT.
+The original copyright, license and trademark strings remain embedded.
+
+The glyph for U+4E2A uses the upstream native v0.1 design with local revisions.
+Its source OTF SHA-256 is:
+c4f69e365d5b34c6666cda533fb120ce656b63440ee4b7b5f149142235658005
+Other revised forms use the v0.2 family outlines and components.
+
+Glyph revisions copyright 2026 QHDL Poem Fix contributors.
+New build tool code is MIT-licensed, with its license header in the file.
+
+Upstream files in data/ are retained unchanged. The derivative uses the distinct
+family QHDL Poem Fix / PostScript QHDLPoemFix-Regular.

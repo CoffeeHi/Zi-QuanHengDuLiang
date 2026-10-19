@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "fonttools_version": "4.67.0",
+  "independent_build_count": 2,
+  "fixed_head_modified": 3875212800,
+  "derived_sha256": "51ea28e5ac57c78066b232379032ec14367bfb23658485830f7eb8828f128172",
+  "bytes_identical": true,
+  "source_sha256": "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61"
+}
