@@ -3,7 +3,7 @@
 # Copyright (c) 2026 QHDL Poem Fix contributors
 """Build or verify the narrowly patched QHDL Poem Fix font.
 
-The checked-in JSON contains the final ten glyph outlines and exact metrics.
+The checked-in JSON contains the final glyph outlines and exact metrics.
 The upstream v0.2 input is SHA-256 pinned; it is never modified in place.
 Requires fontTools==4.67.0. No historical review files or local vendor are used.
 """
@@ -23,12 +23,12 @@ from fontTools.ttLib import TTFont
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE_SHA256 = "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61"
-TARGET_CHARACTERS = "入送书士个凉屏料罥浥"
+TARGET_CHARACTERS = "入送书士个凉屏料罥浥疏"
 FAMILY = "QHDL Poem Fix"
 POSTSCRIPT = "QHDLPoemFix-Regular"
 FULL_NAME = FAMILY + " Regular"
-VERSION = "0.201-poemfix"
-REVISION = 0.201
+VERSION = "0.202-poemfix"
+REVISION = 0.202
 MODIFIED_TIME = int(datetime(2026, 10, 19, tzinfo=timezone.utc).timestamp()) + 2082844800
 COPYRIGHT_ADDITION = "Selected glyph revisions copyright 2026 Poem Subtitle Font Revision contributors."
 MUTABLE_TABLES = {"CFF ", "hmtx", "vmtx", "name", "head", "DSIG"}
@@ -83,10 +83,10 @@ def load_patch(path: Path):
     if payload.get("source_sha256") != SOURCE_SHA256:
         raise ValueError("Patch is not based on the pinned upstream v0.2 font")
     rows = payload.get("glyphs", [])
-    if len(rows) != 10 or {row["character"] for row in rows} != set(TARGET_CHARACTERS):
-        raise ValueError("Patch must contain each of the expected ten characters exactly once")
-    if len({row["glyph_name"] for row in rows}) != 10:
-        raise ValueError("Expected ten distinct target glyphs")
+    if len(rows) != len(TARGET_CHARACTERS) or {row["character"] for row in rows} != set(TARGET_CHARACTERS):
+        raise ValueError("Patch must contain each of the expected characters exactly once")
+    if len({row["glyph_name"] for row in rows}) != len(TARGET_CHARACTERS):
+        raise ValueError("Expected a distinct target glyph for each patched character")
     for row in rows:
         if recording_hash(row["recording"]) != row["final_outline_sha256"]:
             raise ValueError("Patch outline payload hash mismatch: " + row["character"])
@@ -229,7 +229,8 @@ def verify(source: Path, output: Path, rows):
             "units_per_em_unchanged": original["head"].unitsPerEm == derived["head"].unitsPerEm == 1000,
             "actual_modified_outlines": modified,
             "actual_modified_outline_count": len(modified),
-            "exactly_expected_ten_glyphs_changed": set(modified) == allowed,
+            "expected_modified_outline_count": len(allowed),
+            "exactly_expected_glyphs_changed": set(modified) == allowed,
             "unexpected_outline_changes": unexpected_outline,
             "metric_changes": metric_changes,
             "exactly_expected_metric_changes": all(set(metric_changes[table]) == expected_metric_changes[table]
@@ -237,7 +238,7 @@ def verify(source: Path, output: Path, rows):
             "unexpected_metric_changes": unexpected_metric,
             "final_patch_mismatches": patch_errors,
             "affected_unicode_codepoints": affected_codepoints,
-            "cmap_alias_note": "Ten shared glyphs also cover U+2F0A, U+2F20, U+F979, U+F9BE; mappings are unchanged.",
+            "cmap_alias_note": "The patched shared glyphs also cover U+2F0A, U+2F20, U+F979, U+F9BE; mappings are unchanged.",
             "frozen_tables_byte_identical": frozen_identical,
             "table_set_expected": new_tables == old_tables - {"DSIG"},
             "dsig_removed": "DSIG" not in derived,
@@ -255,7 +256,7 @@ def verify(source: Path, output: Path, rows):
             "head_revision_expected": abs(derived["head"].fontRevision - REVISION) <= 1 / 65536,
         })
         for key in ("glyph_order_unchanged", "best_cmap_unchanged", "all_unicode_cmap_tables_unchanged",
-                    "units_per_em_unchanged", "exactly_expected_ten_glyphs_changed",
+                    "units_per_em_unchanged", "exactly_expected_glyphs_changed",
                     "exactly_expected_metric_changes", "table_set_expected", "dsig_removed",
                     "independent_names_expected", "embedded_original_copyright_retained",
                     "fixed_head_modified", "head_revision_expected"):
@@ -275,7 +276,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-v0.2.otf")
     parser.add_argument("--patch", type=Path, default=REPOSITORY / "patches/poem-glyphs.json")
-    parser.add_argument("--output", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-PoemFix-v0.2.1.otf")
+    parser.add_argument("--output", type=Path, default=REPOSITORY / "data/QuanHengDuLiang-PoemFix-v0.2.2.otf")
     parser.add_argument("--verify-report", type=Path, default=REPOSITORY / "build/poemfix-validation.json")
     parser.add_argument("--verify-only", action="store_true", help="Verify an existing --output without rebuilding it")
     args = parser.parse_args()
@@ -303,7 +304,7 @@ def main() -> int:
         report["patch_sha256"] = sha256(patch_path)
         report["reference_review_sha256"] = payload.get("review_font_sha256")
         if not args.verify_only:
-            print("Building ten glyph corrections with fixed metadata...", flush=True)
+            print("Building glyph corrections with fixed metadata...", flush=True)
             build(source, output, rows)
         print("Verifying every one of 65,535 glyphs and unchanged tables...", flush=True)
         report["checks"], report["errors"] = verify(source, output, rows)

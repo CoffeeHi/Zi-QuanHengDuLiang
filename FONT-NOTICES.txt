@@ -1,4 +1,4 @@
-QHDL Poem Fix 0.2.1
+QHDL Poem Fix 0.2.2
 
 Derived from QuanHengDuLiang v0.2 by Yuchen Tian:
 https://github.com/kaonashi-tyc/Zi-QuanHengDuLiang

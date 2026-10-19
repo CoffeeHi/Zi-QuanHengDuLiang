@@ -19,11 +19,13 @@
       "cid15814",
       "cid20051",
       "cid23359",
+      "cid27096",
       "cid31801",
       "cid40249"
     ],
-    "actual_modified_outline_count": 10,
-    "exactly_expected_ten_glyphs_changed": true,
+    "actual_modified_outline_count": 11,
+    "expected_modified_outline_count": 11,
+    "exactly_expected_glyphs_changed": true,
     "unexpected_outline_changes": [],
     "metric_changes": {
       "hmtx": [
@@ -65,12 +67,13 @@
       "U+5C4F",
       "U+6599",
       "U+6D65",
+      "U+758F",
       "U+7F65",
       "U+9001",
       "U+F979",
       "U+F9BE"
     ],
-    "cmap_alias_note": "Ten shared glyphs also cover U+2F0A, U+2F20, U+F979, U+F9BE; mappings are unchanged.",
+    "cmap_alias_note": "The patched shared glyphs also cover U+2F0A, U+2F20, U+F979, U+F9BE; mappings are unchanged.",
     "frozen_tables_byte_identical": {
       "BASE": true,
       "GDEF": true,
@@ -97,14 +100,14 @@
         "QHDLPoemFix-Regular"
       ],
       "version": [
-        "Version 0.201-poemfix"
+        "Version 0.202-poemfix"
       ],
       "cff_font_names": [
         "QHDLPoemFix-Regular"
       ],
       "cff_family": "QHDL Poem Fix",
       "cff_full_name": "QHDL Poem Fix Regular",
-      "cff_version": "0.201-poemfix",
+      "cff_version": "0.202-poemfix",
       "cff_fd_names": [
         "QHDLPoemFix-FD0",
         "QHDLPoemFix-FD1",
@@ -134,11 +137,11 @@
     "source_file_unchanged": true
   },
   "source": "data/QuanHengDuLiang-v0.2.otf",
-  "derived": "data/QuanHengDuLiang-PoemFix-v0.2.1.otf",
+  "derived": "data/QuanHengDuLiang-PoemFix-v0.2.2.otf",
   "patch": "patches/poem-glyphs.json",
   "fonttools_version": "4.67.0",
   "source_sha256": "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61",
-  "patch_sha256": "a84a97353a7adbb198bdd88a65debd7e96b1bcfac8635e643162b19a8182cf37",
-  "reference_review_sha256": "a46f8f55cf31b10d5c19277cfe52ba29bc96aea97e5ee3860d284e9598c6ed22",
-  "derived_sha256": "51ea28e5ac57c78066b232379032ec14367bfb23658485830f7eb8828f128172"
+  "patch_sha256": "c4ae4597eb1c6d2ecab03ec46f3ea51d6aba67c85c032394d7a98583d2d30de8",
+  "reference_review_sha256": "23b65b8c8155f7c34910152d2319559f402e269a4b62e416d5e7114abf395235",
+  "derived_sha256": "23d153971aada4524f050033d9c7ed116fb589ac68b74db1827ec6c5313c1906"
 }
