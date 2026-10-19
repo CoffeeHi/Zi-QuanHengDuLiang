@@ -100,14 +100,14 @@
         "QHDLPoemFix-Regular"
       ],
       "version": [
-        "Version 0.202-poemfix"
+        "Version 0.203-poemfix"
       ],
       "cff_font_names": [
         "QHDLPoemFix-Regular"
       ],
       "cff_family": "QHDL Poem Fix",
       "cff_full_name": "QHDL Poem Fix Regular",
-      "cff_version": "0.202-poemfix",
+      "cff_version": "0.203-poemfix",
       "cff_fd_names": [
         "QHDLPoemFix-FD0",
         "QHDLPoemFix-FD1",
@@ -137,11 +137,11 @@
     "source_file_unchanged": true
   },
   "source": "data/QuanHengDuLiang-v0.2.otf",
-  "derived": "data/QuanHengDuLiang-PoemFix-v0.2.2.otf",
+  "derived": "data/QuanHengDuLiang-PoemFix-v0.2.3.otf",
   "patch": "patches/poem-glyphs.json",
   "fonttools_version": "4.67.0",
   "source_sha256": "0829f730d241003477521cd535282c01d66fc5a20cea912c538b885a750c5e61",
-  "patch_sha256": "c4ae4597eb1c6d2ecab03ec46f3ea51d6aba67c85c032394d7a98583d2d30de8",
-  "reference_review_sha256": "23b65b8c8155f7c34910152d2319559f402e269a4b62e416d5e7114abf395235",
-  "derived_sha256": "23d153971aada4524f050033d9c7ed116fb589ac68b74db1827ec6c5313c1906"
+  "patch_sha256": "0f1b3998e8fe19445f6ad14a411a83944efebcbf65d4e781dcd932bebde8f07c",
+  "reference_review_sha256": "24b6e7876e3a470178b1e965bda475d8d3f1841474a8a10e4a9d69e8e75db727",
+  "derived_sha256": "e7525fb3da124283dd82b99b4662a619a71eff2933e931ee39439f447f3dd66e"
 }

@@ -6,7 +6,7 @@ This branch adds a separately named **QHDL Poem Fix** OTF and reproducible
 outline patches for eleven glyphs. The upstream fonts remain unchanged.
 
 - [修订说明、构建与校验](docs/poem-fix.md)
-- [修订字体 OTF](data/QuanHengDuLiang-PoemFix-v0.2.2.otf)
+- [修订字体 OTF](data/QuanHengDuLiang-PoemFix-v0.2.3.otf)
 - [十一字前后样张](docs/poem-glyph-comparison.png)
 
 The derivative font and glyph outlines retain the Source Han OFL notice in

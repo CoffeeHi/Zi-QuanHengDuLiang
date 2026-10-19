@@ -4,11 +4,12 @@
 
 ## 字体与改动
 
-- 文件：[`data/QuanHengDuLiang-PoemFix-v0.2.2.otf`](../data/QuanHengDuLiang-PoemFix-v0.2.2.otf)
+- 文件：[`data/QuanHengDuLiang-PoemFix-v0.2.3.otf`](../data/QuanHengDuLiang-PoemFix-v0.2.3.otf)
 - 家族名：`QHDL Poem Fix`；PostScript 名：`QHDLPoemFix-Regular`。
 - 修订的十一个字形：**入、送、书、士、个、凉、屏、料、罥、浥、疏**。
 - 入调整起笔、右肩与捺身的连续走势；书补足点画；士调整长短横的关系；凉、屏、送、料、个、罥、浥分别调整笔画、部件或衔接空间，以适合字幕辨识和同家族笔势。
 - 疏将左上口状封闭改为开放横钩与中竖衔接，保留右部、左下止部和原笔势。
+- 送与入的字形轮廓等比缩小至此前修复版本的94%，沿用原视觉位置，横排、竖排字进均不变；入的起笔改为带短圆转的笔锋，肩部与下方撇捺笔势保持。
 - 个使用本仓库 v0.1 的原生字形并有局部调整；其余修订以 v0.2 的笔画与部件为基础。
 
 ![十一字前后对比](poem-glyph-comparison.png)
@@ -28,7 +29,7 @@ python -m pip install -r requirements-poemfix.txt
 python tools/build_poem_fix.py --verify-report docs/poem-fix-validation.json
 ```
 
-输出为 `data/QuanHengDuLiang-PoemFix-v0.2.2.otf`。构建工具校验输入 SHA-256 和原字形指纹，应用补丁中的最终轮廓及精确横排、竖排度量，并使用独立字体名称。字体版本与构建时间固定，以支持相同输入和依赖下的重复构建。
+输出为 `data/QuanHengDuLiang-PoemFix-v0.2.3.otf`。构建工具校验输入 SHA-256 和原字形指纹，应用补丁中的最终轮廓及精确横排、竖排度量，并使用独立字体名称。字体版本与构建时间固定，以支持相同输入和依赖下的重复构建。
 
 基线来自上游提交 `72c2d0c37a566cb0b79e8d655b27b65c610efbb0`；原版 v0.2 OTF 的 SHA-256：
 
